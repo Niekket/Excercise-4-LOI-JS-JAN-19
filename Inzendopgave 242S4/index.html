@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="js/s4.js" async></script>
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+
+    }
+
+    table,
+    th,
+    td {
+      border-collapse: collapse;
+      border: 1px solid black;
+    }
+
+    th,
+    td {
+      padding: 5px;
+    }
+
+    th {
+      text-align: left;
+      background-color: #c95050;
+      color: white;
+    }
+
+    table.uitvoer-tabel {
+      width: 60%;
+    }
+
+    table.uitvoer-tabel tr:nth-child(even) {
+      background-color: #eee;
+    }
+
+    table.uitvoer-tabel tbody tr td:first-child {
+      width: 30px;
+    }
+
+    form.invoer-form {
+      margin-top: 50px;
+      width: 30%;
+    }
+
+    form.invoer-form input,
+    form.invoer-form label {
+      display: block;
+    }
+
+    form.invoer-form label {
+      margin-bottom: 5px;
+      margin-top: 10px;
+    }
+
+    form.invoer-form button {
+      margin-top: 30px;
+    }
+
+    form.invoer-form input:focus {
+      border-color: #d45757;
+      outline: none;
+    }
+
+    #voeg-data-toe {
+      margin-top: 30px;
+    }
+
+    input:focus {
+      border: 1px solid #d45757;
+      outline: none;
+    }
+
+    #error-verwijder-rij {
+      color: #d45757;
+      font-weight: bold;
+    }
+  </style>
+  <title>Document</title>
+</head>
+
+<body>
+  <table class="uitvoer-tabel" id="uitvoer-tabel">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Voornaam</th>
+        <th>Achternaam</th>
+        <th>Leeftijd</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="row-nmr">1</td>
+        <td>Johan</td>
+        <td>cruijff</td>
+        <td>54</td>
+      </tr>
+      <tr>
+        <td class="row-nmr">2</td>
+        <td>Frans</td>
+        <td>Bauer</td>
+        <td>47</td>
+      </tr>
+      <tr>
+        <td class="row-nmr">3</td>
+        <td>Willem</td>
+        <td>van Oranje</td>
+        <td>80</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <form action="" id="invoer-formulier" class="invoer-form">
+    <label>Voornaam:</label>
+    <input placeholder="Voornaam" type="text" name="vnaam" id="voornaam">
+    <label>Achternaam:</label>
+    <input placeholder="Achternaam" type="text" name="anaam" id="achternaam">
+    <label>Leeftijd:</label>
+    <input placeholder="leeftijd" type="text" name="points" id="leeftijd">
+  </form>
+  <button id="voeg-data-toe">Voeg toe</button>
+  <p id="uitvoer"></p>
+  <input placeholder="kolom nummer" type="text" id="input-verwijder-rij"><br><br>
+  <button id="verwijder-rij">delete</button>
+  <p id="error-verwijder-rij"></p>
+</body>
+
+</html>
